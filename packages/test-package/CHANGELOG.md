@@ -1,3 +1,9 @@
+## 1.4.0 (2025-12-07)
+
+### ✨ New Features
+
+- made a change to my package 4 ([4a1f466](https://github.com/dbudwin/nx-bug/commit/4a1f466))
+
 ## 1.3.0 (2025-12-07)
 
 ### ✨ New Features
