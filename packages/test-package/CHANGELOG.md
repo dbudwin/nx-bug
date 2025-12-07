@@ -1,3 +1,9 @@
+## 1.3.0 (2025-12-07)
+
+### ✨ New Features
+
+- made a change to my package 3 ([de52593](https://github.com/dbudwin/nx-bug/commit/de52593))
+
 ## 1.2.0 (2025-12-07)
 
 ### ✨ New Features
