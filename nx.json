@@ -1,0 +1,162 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultBase": "main",
+  "workspaceLayout": {
+    "appsDir": "apps"
+  },
+  "cli": {
+    "packageManager": "pnpm"
+  },
+  "release": {
+    "projectsRelationship": "independent",
+    "conventionalCommits": {
+      "types": {
+        "feat": {
+          "changelog": {
+            "semverBump": "minor",
+            "hidden": false,
+            "title": "✨ New Features"
+          }
+        },
+        "fix": {
+          "changelog": {
+            "semverBump": "patch",
+            "hidden": false,
+            "title": "🐛 Bug Fixes"
+          }
+        },
+        "perf": {
+          "changelog": {
+            "semverBump": "patch",
+            "hidden": false,
+            "title": "⚡ Performance Improvements"
+          }
+        },
+        "refactor": {
+          "changelog": {
+            "semverBump": "patch",
+            "hidden": false,
+            "title": "♻️ Code Refactoring"
+          }
+        },
+        "chore": {
+          "changelog": {
+            "semverBump": "patch",
+            "hidden": false,
+            "title": "🧹 Chore"
+          }
+        },
+        "revert": {
+          "changelog": {
+            "semverBump": "patch",
+            "hidden": false,
+            "title": "⏪ Reverts"
+          }
+        },
+        "style": {
+          "changelog": {
+            "semverBump": "patch",
+            "hidden": false,
+            "title": "🎨 Style"
+          }
+        }
+      }
+    },
+    "version": {
+      "conventionalCommits": true,
+      "updateDependents": "always",
+      "fallbackCurrentVersionResolver": "disk",
+      "preserveMatchingDependencyRanges": false
+    },
+    "changelog": {
+      "projectChangelogs": {
+        "renderOptions": {
+          "authors": false,
+          "commitReferences": true,
+          "versionTitleDate": true
+        }
+      },
+      "automaticFromRef": true
+    },
+    "projects": [
+      "packages/*"
+    ],
+    "git": {
+      "commit": true,
+      "stageChanges": true,
+      "tag": true,
+      "commitMessage": "chore(release): bump package versions and update changelogs [skip ci]"
+    },
+    "publish": {
+      "executor": "@nx/js:release-publish",
+      "options": {
+        "packageRoot": "packages/{projectName}",
+        "registry": "https://npm.pkg.github.com"
+      }
+    },
+    "releaseTag": {
+      "pattern": "{projectName}@{version}"
+    }
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/storybook/plugin",
+      "options": {
+        "buildStorybookTargetName": "build-storybook",
+        "serveStorybookTargetName": "storybook",
+        "testStorybookTargetName": "test-storybook",
+        "staticStorybookTargetName": "static-storybook"
+      }
+    },
+    {
+      "plugin": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    }
+  ],
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "default",
+        "^default"
+      ]
+    },
+    "stylelint": {
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
+      ],
+      "cache": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "file-scan-router",
+  "version": "1.0.0",
+  "main": "lib/index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint:tsc": "tsc --noemit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dbudwin/test-package": "^1.0.0"
+  },
+  "type": "module"
+}

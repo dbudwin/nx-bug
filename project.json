@@ -1,0 +1,8 @@
+{
+  "name": "nx-bug",
+  "$schema": "./node_modules/nx/schemas/project-schema.json",
+  "root": ".",
+  "sourceRoot": "{projectRoot}/src",
+  "tags": [],
+  "targets": {}
+}
