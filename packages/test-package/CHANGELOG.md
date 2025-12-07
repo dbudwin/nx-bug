@@ -1,3 +1,9 @@
+## 1.2.0 (2025-12-07)
+
+### ✨ New Features
+
+- made a change to my package 2 ([40bc71d](https://github.com/dbudwin/nx-bug/commit/40bc71d))
+
 ## 1.1.0 (2025-12-07)
 
 ### ✨ New Features
