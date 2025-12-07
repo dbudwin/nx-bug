@@ -58,7 +58,7 @@ importers:
         specifier: ^23.0.2
         version: 23.1.1(typescript@5.9.3)
 
-  packages/myNxBugPackage: {}
+  packages/test-package: {}
 
 packages:
 

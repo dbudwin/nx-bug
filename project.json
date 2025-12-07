@@ -1,5 +1,7 @@
 {
   "name": "nx-bug",
+  "projectType": "application",
+  "version": "0.0.1",
   "$schema": "./node_modules/nx/schemas/project-schema.json",
   "root": ".",
   "sourceRoot": "{projectRoot}/src",
