@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@dbudwin/test-package": "^1.0.0"
+    "@dbudwin/test-package": "^1.0.1"
   },
   "type": "module"
 }
