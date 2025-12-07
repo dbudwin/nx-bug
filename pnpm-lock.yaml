@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@dbudwin/test-package':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.3.0
@@ -787,8 +787,8 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^7.0.0
 
-  '@dbudwin/test-package@1.0.0':
-    resolution: {integrity: sha512-AHSZ2FtpCvjbkCDwVZ2+6nsHk8RmBlgWKzy8FOA03VqP1ibRBD3uGrJOX1axxMNOz3g492wbac85QDJN12SJQw==}
+  '@dbudwin/test-package@1.0.1':
+    resolution: {integrity: sha512-8PbtFr7mmDlkJvePsQb7u5sJP7gwcYyEzrXKKaNRSSxThai+ON7KOH57IAwCtJNyE3QvpTvS04zRfxsIKVtjTQ==}
 
   '@dual-bundle/import-meta-resolve@4.2.1':
     resolution: {integrity: sha512-id+7YRUgoUX6CgV0DtuhirQWodeeA7Lf4i2x71JS/vtA5pRb/hIGWlw+G6MeXvsM+MXrz0VAydTGElX1rAfgPg==}
@@ -6794,7 +6794,7 @@ snapshots:
     dependencies:
       postcss-selector-parser: 7.1.1
 
-  '@dbudwin/test-package@1.0.0': {}
+  '@dbudwin/test-package@1.0.1': {}
 
   '@dual-bundle/import-meta-resolve@4.2.1': {}
 
